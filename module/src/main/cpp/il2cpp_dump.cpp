@@ -60,25 +60,6 @@ uint64_t get_module_base(const char *module_name) {
     return addr;
 }
 
-
-
-
-// hack starts here
-auto domain = il2cpp_domain_get();
-il2cpp_thread_attach(domain);
-auto assemblies = il2cpp_domain_get_assemblies(domain, &size);
-for (int i = 0; i < size; ++i) {
-    if (strcmp(assemblies[i]->aname.name, "CommonLibs") == 0) {
-        auto image = il2cpp_assembly_get_image(assemblies[i]);
-    }
-auto klass = il2cpp_class_from_name(image, "IPbSerializablePB", "BackAttackCritical");
-FieldInfo* field = il2cpp_class_get_field_from_name(klass, "CriticalChance");
-void* fieldData = il2cpp_field_get_data(field, instance); 
-int newValue = 99999; 
-il2cpp_field_set_value(field, instance, &newValue);
-//my hack end here
-
-
 std::string get_method_modifier(uint32_t flags) {
     std::stringstream outPut;
     auto access = flags & METHOD_ATTRIBUTE_MEMBER_ACCESS_MASK;
