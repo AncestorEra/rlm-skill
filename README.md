@@ -9,15 +9,13 @@ It enables the agent to handle massive codebases (100+ files, millions of lines)
 
 ## 📦 Installation
 
-### For Claude Code
-Run this command in your terminal:
+Run this one-liner in your terminal:
 
 ```bash
-mkdir -p ~/.claude/skills/rlm && curl -o ~/.claude/skills/rlm/SKILL.md https://raw.githubusercontent.com/Bowtiedswan/rlm-skill/main/SKILL.md
+curl -fsSL https://raw.githubusercontent.com/BowTiedSwan/rlm-skill/main/install.sh | bash
 ```
 
-### For OpenCode / Other Agents
-Place the `SKILL.md` file in your agent's skills directory.
+Auto-detects Claude Code and installs the skill.
 
 ## 🚀 Usage
 
