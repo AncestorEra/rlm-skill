@@ -2,7 +2,8 @@
 
 > **"Context is an external resource, not a local variable."**
 
-This skill equips Claude Code (and compatible agents) with the **Recursive Language Model (RLM)** pattern described in [ArXiv:2512.24601](https://arxiv.org/pdf/2512.24601).
+This skill equips Claude Code (and compatible agents) with the **Recursive Language Model (RLM)** pattern described in the research paper:
+**[Recursive Language Modeling (ArXiv:2512.24601)](https://arxiv.org/pdf/2512.24601)**.
 
 It enables the agent to handle massive codebases (100+ files, millions of lines) by treating the filesystem as a database and using parallel background agents to process information recursively, eliminating "context rot".
 
