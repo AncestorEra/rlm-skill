@@ -15,28 +15,6 @@
 #include "il2cpp-tabledefs.h"
 #include "il2cpp-class.h"
 
-
-//Injection Starts Here
-#include "il2cpp-api-types.h"
-auto domain = il2cpp_domain_get();
-il2cpp_thread_attach(domain);
-auto assemblies = il2cpp_domain_get_assemblies(domain, &size);
-for (int i = 0; i < size; ++i) {
-    if (strcmp(assemblies[i]->aname.name, "CommonLibs") == 0) {
-        auto image = il2cpp_assembly_get_image(assemblies[i]);
-    }
-}
-auto klass = il2cpp_class_from_name(image, "IPbSerializablePB", "BackAttackCritical");
-auto method = il2cpp_class_get_method_from_name(klass, "get_IsBackAttack", 1);
-auto addr = method->methodPointer;
-bool* addr = reinterpret_cast<bool*>(method->methodPointer);
-*addr = true;
-// Injection Ends Here
-
-
-
-
-
 #define DO_API(r, n, p) r (*n) p
 
 #include "il2cpp-api-functions.h"
